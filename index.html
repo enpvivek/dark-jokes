@@ -39,41 +39,48 @@
 
         <div
           id="jokebox"
-          class="flex flex-row items-center justify-center md:justify-center h-full m-2 md:m-8 py-8"
+          class="flex flex-row w-full items-center justify-center md:justify-center h-full m-2 p-2 md:m-8 md:py-8"
         >
           <div
-            class="flex w-full items-center justify-center border-red-500 rounded-md border-2 bg-[#ff4382] text-white"
+            class="flex md:w-full h-full items-center justify-center lg:mt-20 border-red-500 rounded-md border-2 bg-[#ff3482] text-white"
           >
+            <div id="loader" class="flex items-center justify-center">
+              <img src="./assets/loader.svg" alt="Loading Joke" srcset="" />
+            </div>
             <p
-              class="flex w-full h-full items-center justify-center py-8 text-center"
-            >
-              I don't know where I stand on abortion. I like killing babies, but
-              I don't like giving women a choice.
-            </p>
+              id="joketext"
+              class="flex md:w-full h-full items-center justify-center py-8 text-center text-3xl font-semibold"
+            ></p>
           </div>
         </div>
       </div>
-      <div
-        id="buttons"
-        class="flex flex-col md:flex-row justify-center items-center"
-      >
-        <div class="flex">
-          <button
-            type="button"
-            class="text-white bg-[#ff3482] hover:bg-[#d10252] active:bg-[#cf1030] transition-colors duration-200 transform active:translate-y-1 font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2"
-          >
-            Tell me a Joke
-          </button>
-        </div>
-        <div class="flex">
-          <button
-            type="button"
-            class="text-white bg-[#ff3482] hover:bg-[#d10252] active:bg-[#cf1030] transition-colors duration-200 transform active:translate-y-1 font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2"
-          >
-            Read it Loud
-          </button>
-        </div>
+    </div>
+    <div
+      id="buttons"
+      class="flex flex-col md:flex-row justify-center items-center my-8 gap-5"
+    >
+      <div class="flex">
+        <button
+          type="button"
+          id="loadjoke"
+          class="text-white bg-[#ff3482] hover:bg-[#d10252] active:bg-[#cf1030] transition-colors duration-200 transform active:translate-y-1 font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2"
+        >
+          Tell me a Joke
+        </button>
       </div>
+      <div class="flex">
+        <button
+          type="button"
+          id="loadtts"
+          class="text-white bg-[#ff3482] hover:bg-[#d10252] active:bg-[#cf1030] transition-colors duration-200 transform active:translate-y-1 font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2"
+        >
+          Read it Loud
+        </button>
+      </div>
+    </div>
+
+    <div id="ttsbox" hidden>
+      <audio id="ttsdata" controls></audio>
     </div>
 
     <!-- Script -->
