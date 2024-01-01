@@ -17,9 +17,64 @@
     />
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
-  <body>
+  <body class="bg-[#45badd]">
     <!-- Header -->
-    <h1 class="bg-black font-semibold text-3xl text-white">Jokes</h1>
+    <div
+      id="headercontainer"
+      class="bg-black flex h-auto w-full justify-center"
+    >
+      <h1
+        class="flex justify-center w-full font-semibold text-5xl text-white m-3"
+      >
+        DARK JOKES
+      </h1>
+    </div>
+
+    <!-- Main Container -->
+    <div id="maincontainer" class="flex flex-col w-full h-full">
+      <div id="jokecontainer" class="flex flex-col md:flex-row w-full h-full">
+        <div id="robot" class="w-full h-full bg justify-center items-center">
+          <img src="./assets/robot.gif" alt="joke-robot" srcset="" />
+        </div>
+
+        <div
+          id="jokebox"
+          class="flex flex-row items-center justify-center md:justify-center h-full m-2 md:m-8 py-8"
+        >
+          <div
+            class="flex w-full items-center justify-center border-red-500 rounded-md border-2 bg-[#ff4382] text-white"
+          >
+            <p
+              class="flex w-full h-full items-center justify-center py-8 text-center"
+            >
+              I don't know where I stand on abortion. I like killing babies, but
+              I don't like giving women a choice.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        id="buttons"
+        class="flex flex-col md:flex-row justify-center items-center"
+      >
+        <div class="flex">
+          <button
+            type="button"
+            class="text-white bg-[#ff3482] hover:bg-[#d10252] active:bg-[#cf1030] transition-colors duration-200 transform active:translate-y-1 font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2"
+          >
+            Tell me a Joke
+          </button>
+        </div>
+        <div class="flex">
+          <button
+            type="button"
+            class="text-white bg-[#ff3482] hover:bg-[#d10252] active:bg-[#cf1030] transition-colors duration-200 transform active:translate-y-1 font-medium rounded-full text-md px-5 py-2.5 text-center me-2 mb-2"
+          >
+            Read it Loud
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- Script -->
     <script src="script.js"></script>
